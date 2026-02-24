@@ -1,0 +1,30 @@
+{
+  "name": "@normalfinance/normal-oracle",
+  "description": "Bridging cross-chain oracles with standardized risk controls to Stellar Soroban",
+  "version": "0.1.0",
+  "scripts": {
+    "env": "cp .env.example .env.testnet",
+    "test": "pnpm run test:integration && pnpm run test:unit",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "scout": "cargo scout-audit --output-format html --output-path audits/scout/report.html",
+    "contracts:bindings": "./scripts/generate-bindings.sh",
+    "contracts:deploy": "./scripts/deploy.sh",
+    "contracts:setup": "./scripts/setup.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/normalfinance/normal-oracle.git"
+  },
+  "author": "Normal",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/normalfinance/normal-oracle/issues"
+  },
+  "homepage": "https://github.com/normalfinance/normal-oracle",
+  "devDependencies": {
+    "glob": "^11.0.2"
+  },
+  "type": "module",
+  "dependencies": {}
+}
